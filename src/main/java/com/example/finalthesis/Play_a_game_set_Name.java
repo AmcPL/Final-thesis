@@ -12,6 +12,8 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
+import static javafx.fxml.FXMLLoader.load;
+
 public class Play_a_game_set_Name {
 
     @FXML
@@ -23,10 +25,15 @@ public class Play_a_game_set_Name {
     @FXML
     private Button Play_a_Game;
 
+    String name;
+    Stage stage;
+    Scene scene;
+    Parent root;
+
     @FXML
     void Back_to_menu(ActionEvent event) throws IOException {
 
-        Parent root = FXMLLoader.load(getClass().getResource("hello-view.fxml"));
+        Parent root = load(getClass().getResource("hello-view.fxml"));
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         Scene scene = new Scene(root);
         stage.setScene(scene);
@@ -35,7 +42,15 @@ public class Play_a_game_set_Name {
     }
 
     @FXML
-    void Play_a_game(ActionEvent event) {
+    void Play_a_game(ActionEvent event) throws IOException {
+
+        name = NameField.getText();
+
+        Parent root = load(getClass().getResource("Game.fxml"));
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
 
     }
 

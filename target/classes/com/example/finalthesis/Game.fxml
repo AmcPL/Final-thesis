@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.finalthesis.GameController">
+   <children>
+      <Button fx:id="buttonA" layoutX="112.0" layoutY="188.0" mnemonicParsing="false" onAction="#Button_Klik" text="Button" />
+      <Button fx:id="buttonB" layoutX="112.0" layoutY="276.0" mnemonicParsing="false" onAction="#Button_Klik" text="Button" />
+      <Button fx:id="buttonC" layoutX="414.0" layoutY="188.0" mnemonicParsing="false" onAction="#Button_Klik" text="Button" />
+      <Button fx:id="buttonD" layoutX="414.0" layoutY="276.0" mnemonicParsing="false" onAction="#Button_Klik" text="Button" />
+      <Text fx:id="Progres" layoutX="514.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="63.13671875" />
+   </children>
+</AnchorPane>
