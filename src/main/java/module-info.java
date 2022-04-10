@@ -9,6 +9,7 @@ module com.example.finalthesis {
     requires org.kordamp.ikonli.javafx;
     requires org.kordamp.bootstrapfx.core;
     requires eu.hansolo.tilesfx;
+    requires AnimateFX;
 
     opens com.example.finalthesis to javafx.fxml;
     exports com.example.finalthesis;

@@ -44,14 +44,18 @@ public class Play_a_game_set_Name {
     @FXML
     void Play_a_game(ActionEvent event) throws IOException {
 
-        name = NameField.getText();
+        if(NameField.getText().length() == 0){
+            new animatefx.animation.Shake(NameField).play();
+            NameField.setStyle("-fx-border-color: red ; -fx-border-with: 2px ;");
 
-        Parent root = load(getClass().getResource("Game.fxml"));
-        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        Scene scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
-
+        }
+        else {
+            Parent root = load(getClass().getResource("Game.fxml"));
+            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            Scene scene = new Scene(root);
+            stage.setScene(scene);
+            stage.show();
+        }
     }
 
 }
