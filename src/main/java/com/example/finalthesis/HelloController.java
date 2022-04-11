@@ -6,7 +6,9 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
+import javafx.scene.control.ButtonType;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
@@ -35,8 +37,14 @@ public class HelloController {
     @FXML
     void Exit_game(ActionEvent event) {
 
-        stage = (Stage) RootPane.getScene().getWindow();
-        stage.close();
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+        alert.setTitle("wyjście");
+        alert.setHeaderText("Czy napewno chcesz wyjść z programu ?");
+
+        if(alert.showAndWait().get() == ButtonType.OK){
+            stage = (Stage) RootPane.getScene().getWindow();
+            stage.close();
+        }
 
     }
     @FXML

@@ -4,11 +4,14 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.text.Text;
+import javafx.stage.Stage;
 
 public class GameController {
 
     @FXML
     private Text Progres;
+
+    String name;
 
     int actualQuestion = 1;
     int numQuestion = 10;
@@ -25,11 +28,13 @@ public class GameController {
     @FXML
     private Button buttonD;
 
-    String A = "fsdfsdfdsfsdfsdfsdfdsfsdfsdfsdfsdfsfsdfsdfsdfd";
+  void SetName(String name){
 
-    void ShowProgres(int a , int b){
+      this.name = name;
+  }
+    void ShowProgres(int actualQuestion , int numQuestion){
 
-        Progres.setText(a +"/" +b);
+      Progres.setText(actualQuestion +" / "+numQuestion);
 
     }
 
