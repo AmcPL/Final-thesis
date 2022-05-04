@@ -11,10 +11,7 @@ public class GameController {
     @FXML
     private Text Progres;
 
-    String name;
-
-    int actualQuestion = 1;
-    int numQuestion = 10;
+    Quiz Player = new Quiz();
 
     @FXML
     private Button buttonA;
@@ -28,13 +25,13 @@ public class GameController {
     @FXML
     private Button buttonD;
 
-  void SetName(String name){
 
-      this.name = name;
-  }
-    void ShowProgres(int actualQuestion , int numQuestion){
 
-      Progres.setText(actualQuestion +" / "+numQuestion);
+
+
+  void ShowProgres(){
+
+      Progres.setText(Player.actualQuestion +" / "+ Player.numQuestion);
 
     }
 
@@ -43,8 +40,9 @@ public class GameController {
 
 
         if (buttonA == event.getSource()){
-            System.out.println("A");
-            actualQuestion++;
+            System.out.println(Player.name);
+            Player.incrementactualQuestion();
+            ShowProgres();
         }
 
     }
