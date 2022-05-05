@@ -12,6 +12,7 @@ public class GameController {
     private Text Progres;
 
     Quiz Player = new Quiz();
+    Questions questions = new Questions();
 
     @FXML
     private Button buttonA;

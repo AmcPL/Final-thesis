@@ -6,6 +6,7 @@ public class Quiz {
 
     int actualQuestion = 1;
     int numQuestion = 10;
+    int correctAnswer;
 
     void incrementactualQuestion(){
 
