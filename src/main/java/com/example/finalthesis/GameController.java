@@ -26,8 +26,27 @@ public class GameController {
     @FXML
     private Button buttonD;
 
+    @FXML
+    private Text QuestionText;
 
 
+void nextQuestion(){
+
+    if(Player.actualQuestion>= Player.numQuestion){
+        result();
+    }
+    else{
+        QuestionText.setText(questions.questions[Player.actualQuestion]);
+        buttonA.setText(questions.options[Player.actualQuestion][0]);
+        buttonB.setText(questions.options[Player.actualQuestion][1]);
+        buttonC.setText(questions.options[Player.actualQuestion][2]);
+        buttonD.setText(questions.options[Player.actualQuestion][3]);
+
+    }
+}
+void result(){
+System.out.println("Test");
+}
 
 
   void ShowProgres(){
@@ -44,6 +63,7 @@ public class GameController {
             System.out.println(Player.name);
             Player.incrementactualQuestion();
             ShowProgres();
+            nextQuestion();
         }
 
     }

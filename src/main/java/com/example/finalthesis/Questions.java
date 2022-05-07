@@ -2,10 +2,22 @@ package com.example.finalthesis;
 
 public class Questions {
 
-    String[] questions ={};
+   public String[] questions ={
+            "Pytanie Testowe ?",
+            "Pytanie Testowe ?",
 
-    String[][] options = {};
+    };
 
-    char[] answer = {};
+    public String[][] options = {
+
+            {"Odpowiedz 1","Odpowiedz 2","Odpowiedz 3","Odpowiedz4"},
+            {"Odpowiedz 1","Odpowiedz 2","Odpowiedz 3","Odpowiedz4"}
+
+    };
+
+    public char[] answer = {'A',
+                            'A',
+
+    };
 
 }
