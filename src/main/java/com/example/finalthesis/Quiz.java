@@ -5,7 +5,7 @@ public class Quiz {
     String name;
 
     int actualQuestion = 1;
-    int numQuestion = 10;
+    int numQuestion = 30;
     int correctAnswer;
 
     void incrementactualQuestion(){
