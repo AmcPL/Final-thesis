@@ -5,12 +5,11 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Text?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.finalthesis.Play_a_game_set_Name">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.finalthesis.Play_a_game_set_Name">
    <children>
-      <TextField fx:id="NameField" layoutX="566.0" layoutY="348.0" />
-      <Text layoutX="629.0" layoutY="323.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
-      <Button fx:id="Play_a_Game" layoutX="625.0" layoutY="472.0" mnemonicParsing="false" onAction="#Play_a_game" text="graj" />
-      <Button fx:id="Back_to_menu" layoutX="591.0" layoutY="571.0" mnemonicParsing="false" onAction="#Back_to_menu" text="powrót do Menu" />
+      <TextField fx:id="NameField" layoutX="226.0" layoutY="188.0" />
+      <Text layoutX="288.0" layoutY="107.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+      <Button fx:id="Play_a_Game" layoutX="282.0" layoutY="253.0" mnemonicParsing="false" onAction="#Play_a_game" text="graj" />
+      <Button fx:id="Back_to_menu" layoutX="246.0" layoutY="316.0" mnemonicParsing="false" onAction="#Back_to_menu" text="powrót do Menu" />
    </children>
 </AnchorPane>

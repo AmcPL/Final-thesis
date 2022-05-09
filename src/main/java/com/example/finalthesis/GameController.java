@@ -7,6 +7,7 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.ProgressBar;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
@@ -16,6 +17,7 @@ public class GameController {
 
     @FXML
     private Text Progres;
+
 
     Quiz Player = new Quiz();
     Questions questions = new Questions();
@@ -44,8 +46,6 @@ public class GameController {
 
     void nextQuestion() {
 
-
-
         if (Player.actualQuestion-1 == Player.numQuestion) {
 
             buttonA.setDisable(true);
@@ -54,6 +54,7 @@ public class GameController {
             ToRes.setVisible(true);
         } else {
             ToRes.setVisible(false);
+            ShowProgres();
 
             QuestionText.setText(questions.questions[Player.actualQuestion]);
             buttonA.setText(questions.options[Player.actualQuestion][0]);
@@ -94,7 +95,6 @@ public class GameController {
             }
         }
             Player.incrementactualQuestion();
-            ShowProgres();
             nextQuestion();
     }
 
@@ -116,7 +116,10 @@ public class GameController {
     }
 
     void setCSS(){
-      buttonA.setStyle("-fx-background-color: #20B2AA; -fx-background-radius: 15px; -fx-text-fill: #ffffff");
+      buttonA.setStyle("-fx-background-color: white ; -fx-background-radius: 15px;");
+      buttonB.setStyle("-fx-background-color: white ; -fx-background-radius: 15px;");
+      buttonC.setStyle("-fx-background-color: white ; -fx-background-radius: 15px;");
+      ToRes.setStyle("-fx-background-color: white ; -fx-background-radius: 15px;");
     }
 
 }

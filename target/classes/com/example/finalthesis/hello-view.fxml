@@ -4,10 +4,10 @@
 <?import javafx.scene.layout.AnchorPane?>
 
 
-<AnchorPane fx:id="RootPane" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.finalthesis.HelloController">
+<AnchorPane fx:id="RootPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.finalthesis.HelloController">
    <children>
-       <Button fx:id="exit" layoutX="612.0" layoutY="348.0" mnemonicParsing="false" onAction="#Exit_game" text="Wyjscie" AnchorPane.bottomAnchor="200.0" />
-      <Button fx:id="Play_Game" layoutX="593.0" layoutY="348.0" mnemonicParsing="false" onAction="#Play_game" text="Sprawdz siebie" AnchorPane.topAnchor="200.0" />
-      <Button fx:id="About" layoutX="602.0" layoutY="348.0" mnemonicParsing="false" onAction="#About" text="O projekcie" />
+       <Button fx:id="exit" layoutX="250.0" layoutY="281.0" mnemonicParsing="false" onAction="#Exit_game" prefHeight="45.0" prefWidth="100.0" text="Wyjscie" AnchorPane.bottomAnchor="74.0" />
+      <Button fx:id="Play_Game" layoutX="250.0" layoutY="85.0" mnemonicParsing="false" onAction="#Play_game" prefHeight="45.0" prefWidth="100.0" text="Sprawdz siebie" AnchorPane.topAnchor="85.0" />
+      <Button fx:id="About" layoutX="250.0" layoutY="178.0" mnemonicParsing="false" onAction="#About" prefHeight="45.0" prefWidth="100.0" text="O projekcie" />
    </children>
 </AnchorPane>
