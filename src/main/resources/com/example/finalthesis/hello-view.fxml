@@ -1,13 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.layout.AnchorPane?>
-
-
-<AnchorPane fx:id="RootPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.finalthesis.HelloController">
-   <children>
-       <Button fx:id="exit" layoutX="250.0" layoutY="281.0" mnemonicParsing="false" onAction="#Exit_game" prefHeight="45.0" prefWidth="100.0" text="Wyjscie" AnchorPane.bottomAnchor="74.0" />
-      <Button fx:id="Play_Game" layoutX="250.0" layoutY="85.0" mnemonicParsing="false" onAction="#Play_game" prefHeight="45.0" prefWidth="100.0" text="Sprawdz siebie" AnchorPane.topAnchor="85.0" />
-      <Button fx:id="About" layoutX="250.0" layoutY="178.0" mnemonicParsing="false" onAction="#About" prefHeight="45.0" prefWidth="100.0" text="O projekcie" />
-   </children>
+<?import javafx.scene.layout.*?>
+<AnchorPane fx:id="RootPane" prefHeight="400.0" prefWidth="600.0" styleClass="backgroundColor" stylesheets="@Css.css"
+            xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.example.finalthesis.HelloController">
+    <children>
+        <Button fx:id="exit" layoutX="225.0" layoutY="178.0" mnemonicParsing="false" onAction="#Exit_game"
+                prefHeight="45.0" prefWidth="150.0" styleClass="buttons" stylesheets="@Css.css" text="Wyjscie"
+                AnchorPane.bottomAnchor="91.0" AnchorPane.topAnchor="264.0"/>
+        <Button fx:id="Play_Game" layoutX="225.0" layoutY="178.0" mnemonicParsing="false" onAction="#Play_game"
+                prefHeight="45.0" prefWidth="150.0" styleClass="buttons" stylesheets="@Css.css" text="Sprawdz siebie"
+                AnchorPane.topAnchor="100.0"/>
+        <Button fx:id="About" layoutX="225.0" layoutY="178.0" mnemonicParsing="false" onAction="#About"
+                prefHeight="45.0" prefWidth="150.0" styleClass="buttons" stylesheets="@Css.css" text="O projekcie"
+                AnchorPane.topAnchor="178.0"/>
+    </children>
 </AnchorPane>

@@ -59,7 +59,6 @@ public class Play_a_game_set_Name {
             gameController.Player.Setname(name);
             gameController.nextQuestion();
             gameController.ShowProgres();
-            gameController.setCSS();
 
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             Scene scene = new Scene(root);

@@ -46,7 +46,7 @@ public class GameController {
 
     void nextQuestion() {
 
-        if (Player.actualQuestion-1 == Player.numQuestion) {
+        if (Player.actualQuestion - 1 == Player.numQuestion) {
 
             buttonA.setDisable(true);
             buttonB.setDisable(true);
@@ -94,8 +94,8 @@ public class GameController {
                 Player.correctAnswer++;
             }
         }
-            Player.incrementactualQuestion();
-            nextQuestion();
+        Player.incrementactualQuestion();
+        nextQuestion();
     }
 
 
@@ -114,12 +114,6 @@ public class GameController {
 
 
     }
-
-    void setCSS(){
-      buttonA.setStyle("-fx-background-color: white ; -fx-background-radius: 15px;");
-      buttonB.setStyle("-fx-background-color: white ; -fx-background-radius: 15px;");
-      buttonC.setStyle("-fx-background-color: white ; -fx-background-radius: 15px;");
-      ToRes.setStyle("-fx-background-color: white ; -fx-background-radius: 15px;");
-    }
-
 }
+
+
