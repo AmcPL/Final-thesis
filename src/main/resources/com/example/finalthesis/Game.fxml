@@ -7,17 +7,17 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" styleClass="backgroundColor" stylesheets="@Css.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.finalthesis.GameController">
     <children>
-        <Button fx:id="buttonA" layoutX="148.0" layoutY="125.0" mnemonicParsing="false" onAction="#Button_Klik" prefHeight="58.0" prefWidth="302.0" styleClass="buttons" stylesheets="@Css.css" text="Button" textAlignment="CENTER" wrapText="true">
+        <Button fx:id="buttonA" layoutX="148.0" layoutY="127.0" mnemonicParsing="false" onAction="#Button_Klik" prefHeight="58.0" prefWidth="302.0" styleClass="buttons" stylesheets="@Css.css" text="Button" textAlignment="CENTER" wrapText="true">
             <font>
                 <Font name="Georgia Bold" size="12.0" />
             </font>
         </Button>
-        <Button fx:id="buttonB" layoutX="149.0" layoutY="197.0" mnemonicParsing="false" onAction="#Button_Klik" prefHeight="58.0" prefWidth="302.0" styleClass="buttons" stylesheets="@Css.css" text="Button" textAlignment="CENTER" wrapText="true">
+        <Button fx:id="buttonB" layoutX="148.0" layoutY="193.0" mnemonicParsing="false" onAction="#Button_Klik" prefHeight="58.0" prefWidth="302.0" styleClass="buttons" stylesheets="@Css.css" text="Button" textAlignment="CENTER" wrapText="true">
             <font>
                 <Font name="Georgia Bold" size="12.0" />
             </font>
         </Button>
-        <Button fx:id="buttonC" layoutX="148.0" layoutY="266.0" mnemonicParsing="false" onAction="#Button_Klik" prefHeight="58.0" prefWidth="302.0" styleClass="buttons" stylesheets="@Css.css" text="Button" textAlignment="CENTER" wrapText="true">
+        <Button fx:id="buttonC" layoutX="149.0" layoutY="258.0" mnemonicParsing="false" onAction="#Button_Klik" prefHeight="58.0" prefWidth="302.0" styleClass="buttons" stylesheets="@Css.css" text="Button" textAlignment="CENTER" wrapText="true">
             <font>
                 <Font name="Georgia Bold" size="12.0" />
             </font>
@@ -27,14 +27,14 @@
                 <Font name="Georgia Bold" size="22.0" />
             </font>
         </Text>
-        <Button fx:id="ToRes" alignment="CENTER" layoutX="148.0" layoutY="127.0" mnemonicParsing="false" onAction="#ToResults" prefHeight="209.0" prefWidth="302.0" styleClass="buttons" stylesheets="@Css.css" text="Przejdz do wyników" textAlignment="CENTER" underline="true" wrapText="true">
+        <Button fx:id="ToRes" alignment="CENTER" layoutX="148.0" layoutY="127.0" mnemonicParsing="false" onAction="#Rezutat" prefHeight="209.0" prefWidth="302.0" styleClass="buttons" stylesheets="@Css.css" text="Przejdz do wyników" textAlignment="CENTER" underline="true" visible="false" wrapText="true">
             <font>
                 <Font name="Georgia" size="41.0" />
             </font>
         </Button>
         <Text fx:id="QuestionText" fill="WHITE" layoutX="56.0" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tekst" textAlignment="CENTER" wrappingWidth="486.0">
             <font>
-                <Font name="Comic Sans MS" size="15.0" />
+                <Font name="Georgia" size="15.0" />
             </font>
         </Text>
     </children>

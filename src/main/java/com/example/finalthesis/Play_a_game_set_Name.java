@@ -46,7 +46,7 @@ public class Play_a_game_set_Name {
 
         if(NameField.getText().length() == 0){
             new animatefx.animation.Shake(NameField).play();
-            NameField.setStyle("-fx-border-color: red ; -fx-border-with: 2px ;");
+            NameField.setStyle("-fx-border-color: red ; -fx-border-with: 12px ;");
 
         }
         else {

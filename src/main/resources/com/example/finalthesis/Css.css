@@ -9,3 +9,9 @@
 .text{
 -fx-font-family: "Georgia";
 }
+#ProgressBar{
+
+ -fx-progress-color: #00FE0C;
+ -fx-font-size: 25px;
+ -fx-text-fill: white;
+ }
