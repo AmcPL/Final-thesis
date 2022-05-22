@@ -6,7 +6,9 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
+import javafx.scene.control.ButtonType;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
@@ -16,6 +18,7 @@ public class GameController {
 
     @FXML
     private Text Progres;
+
 
     Quiz Player = new Quiz();
     Questions questions = new Questions();
@@ -40,13 +43,12 @@ public class GameController {
     Scene scene;
     Parent root;
 
+    double procent;
     char answer;
 
     void nextQuestion() {
 
-
-
-        if (Player.actualQuestion-1 == Player.numQuestion) {
+        if (Player.actualQuestion - 1 == Player.numQuestion) {
 
             buttonA.setDisable(true);
             buttonB.setDisable(true);
@@ -54,6 +56,7 @@ public class GameController {
             ToRes.setVisible(true);
         } else {
             ToRes.setVisible(false);
+            ShowProgres();
 
             QuestionText.setText(questions.questions[Player.actualQuestion]);
             buttonA.setText(questions.options[Player.actualQuestion][0]);
@@ -76,47 +79,38 @@ public class GameController {
         if (buttonA == event.getSource()) {
             answer = 'A';
             if (answer == questions.answer[Player.actualQuestion]) {
-                Player.correctAnswer++;
+                Player.incrementcorrectAnswer();
 
             }
         }
         if (buttonB == event.getSource()) {
             answer = 'B';
             if (answer == questions.answer[Player.actualQuestion]) {
-                Player.correctAnswer++;
+                Player.incrementcorrectAnswer();
 
             }
         }
         if (buttonC == event.getSource()) {
             answer = 'C';
             if (answer == questions.answer[Player.actualQuestion]) {
-                Player.correctAnswer++;
+                Player.incrementcorrectAnswer();
+
             }
         }
-            Player.incrementactualQuestion();
-            ShowProgres();
-            nextQuestion();
+        Player.actualQuestion++;
+        nextQuestion();
     }
 
+    public void Rezutat(ActionEvent actionEvent) {
+        System.out.println(Player.Test);
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+        alert.setTitle("Wyniki");
+        alert.setHeaderText("Użytkowniku " +Player.name +" udało ci sie osiągnąc " +Player.correctAnswer +" na " +Player.numQuestion);
+        alert.setContentText("Po Kliknieciu Okej Aplikacja zostanie zamknieta ");
 
-    @FXML
-    void ToResults(ActionEvent event) throws IOException {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("Results.fxml"));
-        root = loader.load();
-
-        ResultsController resultsController = new ResultsController();
-
-
-        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        Scene scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
-
-
+        if (alert.showAndWait().get() == ButtonType.OK){
+            javafx.application.Platform.exit();
+        }
     }
-
-    void setCSS(){
-      buttonA.setStyle("-fx-background-color: #20B2AA; -fx-background-radius: 15px; -fx-text-fill: #ffffff");
-    }
-
 }
+

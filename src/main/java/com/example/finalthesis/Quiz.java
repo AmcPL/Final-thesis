@@ -8,10 +8,16 @@ public class Quiz {
     int numQuestion = 30;
     int correctAnswer;
 
-    void incrementactualQuestion(){
+    int Test;
 
-        actualQuestion++;
+void Calculate(){
 
+    Test = this.correctAnswer/this.numQuestion;
+}
+    void incrementcorrectAnswer(){
+        correctAnswer++;
+        Calculate();
+        System.out.println("Prawidłowa Odpowiedz");
     }
     void Setname(String name){
         this.name = name;

@@ -1,0 +1,17 @@
+.backgroundColor{
+    -fx-background-color: linear-gradient(to left,#090979, #00d4ff);
+    }
+.buttons{
+-fx-background-color: white;
+-fx-background-radius: 35px;
+-fx-font-family: "Georgia";
+}
+.text{
+-fx-font-family: "Georgia";
+}
+#ProgressBar{
+
+ -fx-progress-color: #00FE0C;
+ -fx-font-size: 25px;
+ -fx-text-fill: white;
+ }
