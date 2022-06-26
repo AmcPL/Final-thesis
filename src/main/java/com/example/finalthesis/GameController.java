@@ -1,5 +1,7 @@
 package com.example.finalthesis;
 
+import animatefx.animation.Shake;
+import javafx.concurrent.Task;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -13,6 +15,10 @@ import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.concurrent.TimeUnit;
+
+import static java.lang.Thread.onSpinWait;
+import static java.lang.Thread.sleep;
 
 public class GameController {
 
@@ -43,7 +49,6 @@ public class GameController {
     Scene scene;
     Parent root;
 
-    double procent;
     char answer;
 
     void nextQuestion() {
@@ -73,7 +78,7 @@ public class GameController {
     }
 
     @FXML
-    void Button_Klik(ActionEvent event) {
+    void Button_Klik(ActionEvent event) throws InterruptedException {
 
 
         if (buttonA == event.getSource()) {
@@ -98,11 +103,68 @@ public class GameController {
             }
         }
         Player.actualQuestion++;
-        nextQuestion();
+        showCorrentAnswer();
+        //nextQuestion();
+
+    }
+
+    private void showCorrentAnswer() throws InterruptedException {
+        new animatefx.animation.FlipInX(buttonA).play();
+        new animatefx.animation.FlipInX(buttonB).play();
+        new animatefx.animation.FlipInX(buttonC).play();
+
+        switch(questions.answer[Player.actualQuestion]){
+
+            case 'A':
+                buttonA.setStyle("-fx-background-color: #00ff66;");
+                buttonB.setStyle("-fx-background-color: #ff001e;");
+                buttonC.setStyle("-fx-background-color: #ff001e;");
+
+                break;
+
+            case 'B':
+                buttonB.setStyle("-fx-background-color: #00ff66;");
+                buttonA.setStyle("-fx-background-color: #ff001e;");
+                buttonC.setStyle("-fx-background-color: #ff001e;");
+
+                break;
+
+            case 'C':
+                buttonC.setStyle("-fx-background-color: #00ff66;");
+                buttonA.setStyle("-fx-background-color: #ff001e;");
+                buttonB.setStyle("-fx-background-color: #ff001e;");
+
+                break;
+
+        }
+        delay(2000 , () -> {
+                    new animatefx.animation.FlipInX(buttonA).play();
+                    new animatefx.animation.FlipInX(buttonB).play();
+                    new animatefx.animation.FlipInX(buttonC).play();
+                    delay(4000 , () -> {});
+                    buttonA.setStyle("-fx-background-color: #ffffff;");
+                    buttonB.setStyle("-fx-background-color: #ffffff;");
+                    buttonC.setStyle("-fx-background-color: #ffffff;");
+                }
+                );
+        delay(2000 , () -> nextQuestion());
+
+    }
+
+    public static void delay(long millis, Runnable continuation) {
+        Task<Void> sleeper = new Task<Void>() {
+            @Override
+            protected Void call() throws Exception {
+                try { Thread.sleep(millis); }
+                catch (InterruptedException e) { }
+                return null;
+            }
+        };
+        sleeper.setOnSucceeded(event -> continuation.run());
+        new Thread(sleeper).start();
     }
 
     public void Rezutat(ActionEvent actionEvent) {
-        System.out.println(Player.Test);
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
         alert.setTitle("Wyniki");
         alert.setHeaderText("Użytkowniku " +Player.name +" udało ci sie osiągnąc " +Player.correctAnswer +" na " +Player.numQuestion);
